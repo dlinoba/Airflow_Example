@@ -1,4 +1,6 @@
 # Airflow_Example
+This is an ETL example using SCD type 2 simmulating a client update
+
 --To create MYSQL Container use the Dockerfile and docker-compose
 
 --To create AIRFLOW Container
