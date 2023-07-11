@@ -6,6 +6,12 @@ This is an ETL example using SCD type 2 simmulating a client update
 --To create AIRFLOW Container
 docker run -d -p 8080:8080 -v "$PWD/airflow/dags:/opt/airflow/dags/" --entrypoint=/bin/bash --name airflow apache/airflow:2.1.1-python3.8 -c '(airflow db init && airflow users create --username admin --password 1234 --firstname Simple --lastname Example --role Admin --email admin@example.com.br); airflow webserver & airflow scheduler'
 
+And next connect to the Airflow container using the command
+docker container exec -it airflow bash
+and then install pymysql
+pip install pymysql
+
+
 After everything is running, you can check mysql database and check DIM_CLIENTE table
 Next insert a fake sales in FATO table by sql command bellow
 
